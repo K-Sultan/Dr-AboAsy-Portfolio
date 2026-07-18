@@ -1,0 +1,109 @@
+.expertise {
+  background-color: var(--bg-color);
+}
+
+.expertise-container {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 60px;
+  align-items: center;
+  background: var(--bg-card);
+  border-radius: var(--border-radius-xl);
+  padding: 60px;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-subtle);
+}
+
+.expertise-content-col h3 {
+  font-size: 38px;
+  color: var(--text-main);
+  margin-bottom: 36px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  position: relative;
+}
+
+.expertise-content-col h3::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+  border-radius: 3px;
+  margin-top: 16px;
+}
+
+.expertise-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 0;
+  margin: 0;
+}
+
+.expertise-list li {
+  background: var(--bg-color);
+  padding: 20px 24px;
+  border-radius: var(--border-radius-sm);
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  transition: var(--transition);
+  border: 1px solid transparent;
+}
+
+.expertise-list li:hover {
+  background: var(--primary-light);
+  border-color: rgba(26, 92, 110, 0.1);
+  transform: translateX(5px);
+  color: var(--primary-color);
+}
+
+.expertise-list li .bullet-icon {
+  color: var(--primary-color);
+  font-size: 18px;
+}
+
+.expertise-image-col {
+  position: relative;
+}
+
+.expertise-image-col .image-wrapper {
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  position: relative;
+  background: linear-gradient(135deg, rgba(26, 92, 110, 0.05) 0%, rgba(62, 207, 178, 0.1) 100%);
+  border: 1px solid var(--border-subtle);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  aspect-ratio: 4/5;
+}
+
+.exp-image {
+  width: 90%;
+  height: 95%;
+  object-fit: contain;
+  display: block;
+  transition: transform 0.6s ease;
+}
+
+.expertise-image-col .image-wrapper:hover .exp-image {
+  transform: scale(1.03);
+}
+
+@media (max-width: 992px) {
+  .expertise-container {
+    grid-template-columns: 1fr;
+    padding: 32px;
+    gap: 40px;
+  }
+
+  .expertise-image-col {
+    order: -1;
+  }
+}

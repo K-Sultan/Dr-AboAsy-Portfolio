@@ -1,0 +1,123 @@
+.education {
+  background-color: var(--primary-color);
+  color: var(--text-light);
+  padding: 100px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.education::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 100% 100%, rgba(62, 207, 178, 0.15) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.education-container {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.education-image-col {
+  position: relative;
+}
+
+.education-image-col .image-wrapper {
+  border-radius: var(--border-radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.08) 100%);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  aspect-ratio: 4/5;
+}
+
+.education-image-col .image-wrapper::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(26, 92, 110, 0.4) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.edu-image {
+  width: 90%;
+  height: 95%;
+  object-fit: contain;
+  display: block;
+  transition: transform 0.6s ease;
+}
+
+.education-image-col .image-wrapper:hover .edu-image {
+  transform: scale(1.03);
+}
+
+.education-content-col h3 {
+  font-size: 38px;
+  color: var(--text-light);
+  margin-bottom: 36px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  position: relative;
+}
+
+.education-content-col h3::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: var(--accent-color);
+  border-radius: 3px;
+  margin-top: 16px;
+}
+
+.credentials-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+}
+
+.credentials-list li {
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(10px);
+  padding: 22px 28px;
+  border-radius: var(--border-radius-md);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--text-light);
+  transition: var(--transition);
+}
+
+.credentials-list li:hover {
+  background: rgba(255, 255, 255, 0.12);
+  transform: translateX(10px);
+  border-color: rgba(62, 207, 178, 0.4);
+}
+
+.bullet-icon {
+  color: var(--accent-color);
+  font-size: 20px;
+  line-height: 1;
+}
+
+@media (max-width: 992px) {
+  .education-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
