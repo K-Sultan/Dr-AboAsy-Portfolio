@@ -1,6 +1,6 @@
 import React from 'react';
 import './Footer.css';
-import doctorImage from '../assets/doctor_nobg.png';
+import doctorImage from '../assets/doctor - Copy.jpeg';
 
 const Footer = () => {
   return (
@@ -23,38 +23,13 @@ const Footer = () => {
               </div>
             </div>
             <div className="social-links">
-              <a href="#" className="social-icon">📷</a>
-              <a href="#" className="social-icon">📘</a>
-              <a href="#" className="social-icon">🐦</a>
-              <a href="#" className="social-icon">📌</a>
+              <span className="social-icon">📷</span>
+              <span className="social-icon">📘</span>
+              <span className="social-icon">🐦</span>
+              <span className="social-icon">📌</span>
             </div>
           </div>
-          
           <div className="footer-links">
-            <div className="link-col">
-              <h4>Contact</h4>
-              <ul>
-                <li><a href="#">About Profile</a></li>
-                <li><a href="#">Local Address</a></li>
-                <li><a href="#">Resources</a></li>
-                <li><a href="#">Clinic</a></li>
-              </ul>
-            </div>
-            <div className="link-col">
-              <h4>Quick Hours</h4>
-              <ul>
-                <li><a href="#">Hours</a></li>
-                <li><a href="#">Hours</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="#">Privacy Policy</a></li>
-              </ul>
-            </div>
-            <div className="link-col">
-              <h4>Subscribe</h4>
-              <ul>
-                <li><a href="#">Privacy Policy</a></li>
-              </ul>
-            </div>
           </div>
         </div>
         

@@ -1,9 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Contact.css';
 import contactImage from '../assets/doctor - Copy.jpeg';
 import { MessageSquare, Globe, Phone, Mail } from 'lucide-react';
 
 const Contact = () => {
+  const [emailCopied, setEmailCopied] = useState(false);
+
+  const handleCopyEmail = (e) => {
+    e.preventDefault();
+    navigator.clipboard.writeText('aboasy123@gmail.com');
+    setEmailCopied(true);
+    setTimeout(() => {
+      setEmailCopied(false);
+    }, 2000);
+  };
+
   return (
     <footer id="contact" className="contact-section">
       <div className="container contact-container">
@@ -58,13 +69,13 @@ const Contact = () => {
                 </div>
               </a>
 
-              <a href="mailto:aboasy123@gmail.com" className="action-btn email-btn">
+              <button type="button" onClick={handleCopyEmail} className="action-btn email-btn" style={{ width: '100%', textAlign: 'left' }}>
                 <Mail size={20} />
                 <div className="action-text">
-                  <span>Send an Email</span>
-                  <small>aboasy123@gmail.com</small>
+                  <span style={{ color: emailCopied ? 'var(--primary-color)' : '' }}>{emailCopied ? 'Copied to clipboard!' : 'Send an Email'}</span>
+                  <small>{emailCopied ? 'You can now paste it anywhere' : 'aboasy123@gmail.com'}</small>
                 </div>
-              </a>
+              </button>
             </div>
           </div>
         </div>
