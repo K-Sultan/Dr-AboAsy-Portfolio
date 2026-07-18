@@ -115,4 +115,11 @@
   .about-container {
     padding: 24px;
   }
+  .about-text-column h2 {
+    font-size: 30px;
+  }
+  .image-card {
+    max-width: 300px;
+    margin: 0 auto;
+  }
 }

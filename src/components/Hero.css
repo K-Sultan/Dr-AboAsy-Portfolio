@@ -254,3 +254,25 @@
     height: 280px;
   }
 }
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 20px 0 30px;
+  }
+  .stats-container {
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+  }
+  .stat-item {
+    width: 100%;
+    padding: 16px;
+  }
+  .hero-image-wrapper {
+    max-width: 240px;
+  }
+  .hero-image-wrapper::before {
+    width: 220px;
+    height: 220px;
+  }
+}
