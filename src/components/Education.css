@@ -121,3 +121,21 @@
     gap: 40px;
   }
 }
+
+@media (max-width: 768px) {
+  .education-image-col .image-wrapper {
+    max-width: 300px;
+    margin: 0 auto;
+  }
+  .education-content-col h3 {
+    font-size: 30px;
+    text-align: center;
+  }
+  .education-content-col h3::after {
+    margin: 16px auto 0;
+  }
+  .credentials-list li {
+    padding: 16px 20px;
+    font-size: 16px;
+  }
+}

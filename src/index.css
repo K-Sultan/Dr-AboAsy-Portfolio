@@ -188,3 +188,18 @@ section + section::before {
 ::-webkit-scrollbar-thumb:hover {
   background: var(--primary-hover);
 }
+
+/* ── Mobile Responsive Overrides ── */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 16px;
+  }
+  
+  section, .contact-section {
+    padding: 60px 0;
+  }
+
+  section + section::before {
+    margin: 0 auto 40px;
+  }
+}

@@ -219,3 +219,15 @@
     padding: 40px;
   }
 }
+
+@media (max-width: 768px) {
+  .contact-left, .contact-right {
+    padding: 30px 24px;
+  }
+  .contact-action-card h2 {
+    font-size: 30px;
+  }
+  .action-btn {
+    padding: 16px 20px;
+  }
+}

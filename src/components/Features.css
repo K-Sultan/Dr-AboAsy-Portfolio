@@ -113,3 +113,16 @@
   line-height: 1.6;
   color: var(--text-secondary);
 }
+
+@media (max-width: 768px) {
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .feature-card {
+    padding: 30px 20px;
+  }
+  .features-header h2 {
+    font-size: 32px;
+  }
+}
