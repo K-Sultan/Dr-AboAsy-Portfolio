@@ -38,10 +38,10 @@ const Contact = () => {
               <h4>Support</h4>
               <p>aboasy123@gmail.com<br/>+20 115 208 0906</p>
               <div className="social-links">
-                <a href="#"><MessageSquare size={16} /></a>
-                <a href="#"><Globe size={16} /></a>
-                <a href="#"><Phone size={16} /></a>
-                <a href="#"><Mail size={16} /></a>
+                <a href="#" onClick={(e) => e.preventDefault()}><MessageSquare size={16} /></a>
+                <a href="#" onClick={(e) => e.preventDefault()}><Globe size={16} /></a>
+                <a href="#" onClick={(e) => e.preventDefault()}><Phone size={16} /></a>
+                <a href="#" onClick={(e) => e.preventDefault()}><Mail size={16} /></a>
               </div>
             </div>
           </div>
